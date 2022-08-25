@@ -12,7 +12,6 @@ class DonationsController < ApplicationController
         else
             render json: { message: 'Donation not found' }
         end
-        
     end
 
     def create
@@ -24,7 +23,7 @@ class DonationsController < ApplicationController
     private
 
     def donation_params
-        params.require(:product).permit(:brand, :donation_id, :department, :title, :image_url, :available, :shipping_price)
+        params.require(:donation).permit(:id, :brand, :department, :size, :title, :image_url, :available, :shipping_price)
     end
 
 end
