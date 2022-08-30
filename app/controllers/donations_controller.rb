@@ -15,7 +15,7 @@ class DonationsController < ApplicationController
     end
 
     def create
-        donation = Donation.new
+        donation = Donation.new(donation_params)
         donation.save
         render json: donation
     end
@@ -23,7 +23,7 @@ class DonationsController < ApplicationController
     private
 
     def donation_params
-        params.require(:donation).permit(:id, :brand, :department, :size, :title, :image_url, :available, :shipping_price)
+        params.require(:donation).permit(:id, :brand, :department, :size, :title, :image_url, :available, :shipping_price, :admin_name, :admin_id)
     end
 
 end
