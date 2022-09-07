@@ -44,3 +44,7 @@ gem "active_model_serializers", "~> 0.10.13"
 gem "faker", "~> 2.21"
 
 gem "jwt", "~> 2.5"
+
+gem "stripe", "~> 7.1"
+
+gem "dotenv-rails", "~> 2.8"
