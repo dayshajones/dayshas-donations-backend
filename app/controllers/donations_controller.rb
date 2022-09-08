@@ -20,7 +20,13 @@ class DonationsController < ApplicationController
         render json: donation
     end
 
-    private
+    def destroy
+        donation = Donation.find_by_id(params[:id])
+        donation.destroy 
+        render json: {message: "Successfully deleted"}
+      end
+
+    private 
 
     def donation_params
         params.require(:donation).permit(:id, :brand, :department, :size, :title, :image_url, :available, :shipping_price, :admin_name, :admin_id)
