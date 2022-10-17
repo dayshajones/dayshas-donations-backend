@@ -1,4 +1,3 @@
-
 class PaymentIntentsController < ApplicationController
 
     def create
@@ -25,6 +24,3 @@ class PaymentIntentsController < ApplicationController
     end
 
 end
-
-
-        
