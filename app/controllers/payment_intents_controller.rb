@@ -1,4 +1,5 @@
 class PaymentIntentsController < ApplicationController
+    Stripe.api_key = Rails.application.credentials.stripe[:secret_key]
 
     def create
         payment_intent = Stripe::PaymentIntent.create(
