@@ -29,5 +29,7 @@
 
 .env
 
+/config/initializers/stripe.rb
+
 .stripe_key.rb
 /config/credentials/production.key
