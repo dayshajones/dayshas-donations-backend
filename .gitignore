@@ -30,3 +30,4 @@
 .env
 
 .stripe_key.rb
+/config/credentials/production.key
